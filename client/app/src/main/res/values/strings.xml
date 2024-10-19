@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name" translatable="false">Notifications</string>
+    <string name="notification_settings">Notification Settings</string>
+    <string name="save">Save</string>
+    <string name="enable_push_notifications">Push</string>
+    <string name="enable_sms_notifications">SMS</string>
+    <string name="enable_email_notifications">EMAIL</string>
+    <string name="notifications">Notifications</string>
+    <string name="hint_base_api">API Base URL</string>
+    <string name="hint_user_phone_number">Your phone number</string>
+    <string name="hint_user_email">Your e-mail</string>
+    <string name="content_description_e_mail_icon">E-mail icon</string>
+    <string name="content_description_phone_icon">Phone icon</string>
+    <string translatable="false" name="default_api_endpoint">https://notifications.local</string>
+    <string name="check_input">Check input: %1$s</string>
+    <string name="invalid_phone_number">Invalid phone number</string>
+    <string name="invalid_e_mail">Invalid e-mail</string>
+    <string name="retry">Retry</string>
+    <string name="error">Error: %1$s</string>
+    <string name="channel_transactions">Transactions</string>
+    <string name="channel_deposits">Deposits</string>
+    <string name="channel_withdrawals">Withdrawals</string>
+    <string name="channel_confirmations">Confirmations</string>
+    <string name="channel_promotions">Promotions</string>
+    <string name="channel_chat">Chat</string>
+    <string name="channel_support">Support</string>
+    <string name="error_while_saving">Error while saving. Try again</string>
+    <string name="push_enabled_but_device_notifications_disabled">Push enabled, but not notifications permission</string>
+    <string name="unknown_error">Unknown error</string>
+</resources>

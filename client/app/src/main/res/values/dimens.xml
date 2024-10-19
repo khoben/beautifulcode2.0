@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_medium2">32dp</dimen>
+    <dimen name="padding_large">48dp</dimen>
+    <dimen name="elevation_medium">4dp</dimen>
+    <dimen name="elevation_small">2dp</dimen>
+    <dimen name="corner_radius_medium">12dp</dimen>
+    <dimen name="icon_size_medium">32dp</dimen>
+</resources>

@@ -1,0 +1,54 @@
+services:
+  fastapi:
+    container_name: fastapi
+    restart: unless-stopped
+    build:
+      context: ./src
+      dockerfile: ./Dockerfile
+    environment:
+      PORT: ${PORT}
+    networks:
+      - caddy-net
+    ports:
+      - ${PORT}:8000
+    volumes:
+      - .docker-data/fastapi/sqlite:/app/sqlite
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 5m
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  caddy:
+    container_name: caddy
+    restart: unless-stopped
+    build:
+      context: ./caddy
+      dockerfile: ./Dockerfile
+    networks:
+      - caddy-net 
+    ports:
+      - 80:80
+      - 80:80/udp
+      - 443:443
+      - 443:443/udp
+      - 2019:2019
+    volumes:
+      - .docker-data/caddy/data:/data
+      - .docker-data/caddy/config:/config
+    depends_on:
+      - fastapi
+    environment:
+      PROXY_BACKEND: fastapi
+      PROXY_PORT: ${PORT}
+      LOCAL_DOMAIN: ${LOCAL_DOMAIN}
+      INTERNAL_IP: ${INTERNAL_IP}
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+networks:
+  caddy-net:
+    driver: bridge

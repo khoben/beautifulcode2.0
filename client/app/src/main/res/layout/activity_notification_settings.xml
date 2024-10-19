@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/activity_toolbar"
+        layout="@layout/activity_toolbar" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                style="@style/AppMainLayout"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_medium"
+                android:paddingEnd="@dimen/padding_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_medium"
+                        android:layout_height="@dimen/icon_size_medium"
+                        android:contentDescription="@string/content_description_e_mail_icon"
+                        android:src="@drawable/ic_email_24"
+                        app:tint="?colorPrimary" />
+
+                    <Space
+                        android:layout_width="@dimen/padding_small"
+                        android:layout_height="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/user_email_button"
+                        style="@style/AppCardView.Clickable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/user_email_text"
+                            style="@style/AppTextViewEdit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_user_email" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/padding_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_medium"
+                        android:layout_height="@dimen/icon_size_medium"
+                        android:contentDescription="@string/content_description_phone_icon"
+                        android:src="@drawable/ic_phone_24"
+                        app:tint="?colorPrimary" />
+
+                    <Space
+                        android:layout_width="@dimen/padding_small"
+                        android:layout_height="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/user_phone_button"
+                        style="@style/AppCardView.Clickable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/user_phone_text"
+                            style="@style/AppTextViewEdit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_user_phone_number" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/padding_small" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/notification_channel_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/recycler_view_notification_channel_settings_item" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/error_layout"
+            layout="@layout/error_layout"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <include
+            android:id="@+id/loading_layout"
+            layout="@layout/loading_layout"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+</LinearLayout>

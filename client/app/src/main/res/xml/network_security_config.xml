@@ -1,0 +1,13 @@
+<!-- Auto-generated at 2024-10-17T01:37:41.508705+00:00 -->
+<network-security-config>
+    <domain-config>
+		<domain includeSubdomains="true">localhost</domain>
+		<domain includeSubdomains="true">notifications.localhost</domain>
+		<domain includeSubdomains="true">notifications.local</domain>
+		<domain includeSubdomains="true">192.168.100.12</domain>
+		<domain includeSubdomains="true">172.19.0.2</domain>
+        <trust-anchors>
+            <certificates src="@raw/caddy_root_ca"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

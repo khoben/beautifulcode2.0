@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppMainLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="AppMainTwoPanLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="AppTextInputLayout">
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="hintTextColor">?colorPrimary</item>
+        <item name="boxBackgroundMode">filled</item>
+    </style>
+
+    <style name="AppButton">
+        <item name="cornerRadius">@dimen/corner_radius_medium</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+
+    <style name="AppChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipMinHeight">38dp</item>
+        <item name="chipStartPadding">8dp</item>
+        <item name="chipEndPadding">8dp</item>
+    </style>
+
+    <style name="AppCardView">
+        <item name="cardCornerRadius">@dimen/corner_radius_medium</item>
+        <item name="cardElevation">@dimen/elevation_small</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="contentPadding">@dimen/padding_medium</item>
+    </style>
+
+    <style name="AppCardView.Clickable">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="AppTextViewEdit">
+        <item name="android:maxLines">1</item>
+        <item name="autoSizeMinTextSize">12sp</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:drawableEnd">@drawable/rounded_edit_24</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:drawableTint">?colorControlNormal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_small">
+
+    <TextView
+        android:id="@+id/notification_channel_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textAppearance="?textAppearanceHeadline6"
+        app:autoSizeMinTextSize="14sp"
+        app:autoSizeStepGranularity="1sp"
+        app:autoSizeTextType="uniform"
+        tools:text="Transactions" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="@dimen/padding_small" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/notification_settings_chip_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:chipSpacing="@dimen/padding_small">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/check_email"
+            style="@style/AppChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enable_email_notifications"
+            tools:checked="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/check_sms"
+            style="@style/AppChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enable_sms_notifications" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/check_push"
+            style="@style/AppChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enable_push_notifications" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+</LinearLayout>

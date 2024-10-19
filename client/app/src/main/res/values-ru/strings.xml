@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_settings">Настройки уведомлений</string>
+    <string name="save">Cохранить</string>
+    <string name="enable_push_notifications">Push</string>
+    <string name="enable_sms_notifications">SMS</string>
+    <string name="enable_email_notifications">EMAIL</string>
+    <string name="notifications">Уведомления</string>
+    <string name="hint_base_api">Базовый API адрес</string>
+    <string name="hint_user_phone_number">Ваш номер телефона</string>
+    <string name="hint_user_email">Ваш e-mail</string>
+    <string name="content_description_e_mail_icon">Иконка e-mail</string>
+    <string name="content_description_phone_icon">Иконка номер телефона</string>
+    <string name="check_input">Проверьте ввод: %1$s</string>
+    <string name="invalid_phone_number">Неверный номер телефона</string>
+    <string name="invalid_e_mail">Неверный e-mail</string>
+    <string name="retry">Повторить</string>
+    <string name="error">Ошибка: %1$s</string>
+    <string name="channel_transactions">Транзакции</string>
+    <string name="channel_deposits">Пополнения</string>
+    <string name="channel_withdrawals">Выводы</string>
+    <string name="channel_confirmations">Подтверждения</string>
+    <string name="channel_promotions">Промо-акции</string>
+    <string name="channel_chat">Чат</string>
+    <string name="channel_support">Поддержка</string>
+    <string name="error_while_saving">Ошибка во время сохранения. Повторите еще раз</string>
+    <string name="push_enabled_but_device_notifications_disabled">Push включен, но уведомления не разрешены</string>
+    <string name="unknown_error">Неизвестная ошибка</string>
+</resources>

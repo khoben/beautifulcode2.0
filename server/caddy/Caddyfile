@@ -1,0 +1,8 @@
+{
+	admin 0.0.0.0:2019
+}
+
+{$LOCAL_DOMAIN} {
+	tls internal
+	reverse_proxy {$PROXY_BACKEND}:{$PROXY_PORT}
+}
